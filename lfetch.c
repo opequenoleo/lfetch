@@ -63,7 +63,7 @@ int lowercase(char *str){
 int printInfo(SystemInfo *info){
 	snprintf(lines[0], MAX_LEN, "\e[36m%s@%s\e[0m", info->username, info->hostname);
 	snprintf(lines[1], MAX_LEN, "\e[33m%-8s\e[0m %s %s", "os", info->productName, info->displayVersion);
-	snprintf(lines[2], MAX_LEN, "\e[33m%-8s\e[0m %s", "cpu", info->cpuName);
+	snprintf(lines[2], MAX_LEN, "\e[33m%-8s\e[0m %.20s", "cpu", info->cpuName);
 	snprintf(lines[3], MAX_LEN, "\e[33m%-8s\e[0m %llu h %llu min", "uptime", info->hours, info->minutes);
 	snprintf(lines[4], MAX_LEN, "\e[33m%-8s\e[0m %.2f GB / %.2f GB", "memory", info->usedMemoryGb, info->totalMemoryGb);
 	snprintf(lines[5], MAX_LEN, "\e[33m%-8s\e[0m %llu GB / %llu GB", "storage", info->usedStorage, info->totalStorage);
